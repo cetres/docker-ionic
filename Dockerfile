@@ -45,7 +45,7 @@ RUN curl -s -j -L -H "Cookie: oraclelicense=accept-securebackup-cookie" ${JDK_UR
 # https://developer.android.com/studio/
 # -----------------------------------------------------------------------------
 RUN curl -s ${ANDROID_URL} -o /tmp/android_tools.zip && \
-    unzip /tmp/android_tools.zip -d ${ANDROID_HOME} && \
+    unzip -q /tmp/android_tools.zip -d ${ANDROID_HOME} && \
     rm /tmp/android_tools.zip && \
     echo y |/opt/android_sdk/tools/android update sdk -a -u -t platform-tools,${ANDROID_PLATFORMS},build-tools-${ANDROID_BUILD_TOOLS}
 
