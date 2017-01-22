@@ -29,6 +29,7 @@ RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.
 RUN yum update -y && \ 
     yum install -y unzip \
                    nodejs \
+                   npm \
     yum clean all
 
 # -----------------------------------------------------------------------------
@@ -52,16 +53,16 @@ RUN curl -s ${ANDROID_URL} -o /tmp/android_tools.zip && \
 # Install Apache Cordova
 # https://cordova.apache.org/
 # -----------------------------------------------------------------------------
-npm install -g cordova
+RUN npm install -g cordova
 
 # -----------------------------------------------------------------------------
 # Install Ionic
 # https://ionicframework.com/docs/v2/setup/installation/
 # -----------------------------------------------------------------------------
-npm install -g ionic
+RUN npm install -g ionic
 
 # -----------------------------------------------------------------------------
 # Clean up
 # -----------------------------------------------------------------------------
-yum clean all
+RUN yum clean all
 
