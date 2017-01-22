@@ -65,4 +65,3 @@ npm install -g ionic
 # -----------------------------------------------------------------------------
 yum clean all
 
-CM ping localhost
