@@ -12,7 +12,7 @@ MAINTAINER Gustavo Oliveira <cetres@gmail.com>
 # -----------------------------------------------------------------------------
 ENV JDK_URL="http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.rpm" \
     ANDROID_HOME="/opt/android_sdk" \
-    ANDROID_SDK_URL="https://dl.google.com/android/repository/tools_r25.2.3-linux.zip" \
+    ANDROID_URL="https://dl.google.com/android/repository/tools_r25.2.3-linux.zip" \
     ANDROID_BUILD_TOOLS="25.0.2" \
     ANDROID_PLATFORMS="android-25"
 
