@@ -59,10 +59,17 @@ RUN npm install -g cordova
 # Install Ionic
 # https://ionicframework.com/docs/v2/setup/installation/
 # -----------------------------------------------------------------------------
-RUN npm install -g ionic
+RUN npm install -g ionic gulp
 
 # -----------------------------------------------------------------------------
 # Clean up
 # -----------------------------------------------------------------------------
 RUN yum clean all
 
+RUN mkdir /var/local/app
+
+EXPOSE 8100 35729
+
+WORKDIR /var/local/app
+#RUN ionic setup sass
+CMD ["ionic","serve","-c"]
